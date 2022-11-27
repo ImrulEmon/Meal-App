@@ -7,15 +7,6 @@ class CategoryMealsScreen extends StatelessWidget {
 
   const CategoryMealsScreen({super.key});
 
-  // final String id;
-  // final String categoryTitle;
-  // final Color color;
-  // const CategoryMealsScreen(
-  //     {super.key,
-  //     required this.categoryTitle,
-  //     required this.color,
-  //     required this.id});
-
   @override
   Widget build(BuildContext context) {
     final routeArgs = ModalRoute.of(context)?.settings.arguments as Map;
@@ -39,6 +30,7 @@ class CategoryMealsScreen extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return MealItemWidget(
+            id: categoryMeals[index].id,
             title: categoryMeals[index].title,
             imageUrl: categoryMeals[index].imageUrl,
             duration: categoryMeals[index].duration,

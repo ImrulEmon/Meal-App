@@ -24,11 +24,12 @@ class CategoryItemWidget extends StatelessWidget {
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(paddingDft),
       child: Container(
+        alignment: Alignment.center,
         padding: const EdgeInsets.all(paddingDft),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              color.withOpacity(.6),
+              color.withOpacity(.7),
               color,
             ],
             begin: Alignment.topLeft,
@@ -39,9 +40,9 @@ class CategoryItemWidget extends StatelessWidget {
         child: Text(
           title,
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontFamily: 'RobotoCondensed',
-                fontWeight: FontWeight.bold,
-              ),
+              fontFamily: 'RobotoCondensed',
+              fontWeight: FontWeight.bold,
+              color: Colors.white),
         ),
       ),
     );
