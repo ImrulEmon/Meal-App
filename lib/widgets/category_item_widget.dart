@@ -3,19 +3,26 @@ import 'package:meal_app/constants/ml_constants.dart';
 import '../screens/category_meals_screen.dart';
 
 class CategoryItemWidget extends StatelessWidget {
+  final String id;
   final String title;
   final Color color;
 
   const CategoryItemWidget(
-      {super.key, required this.title, required this.color});
+      {super.key, required this.title, required this.color, required this.id});
 
-  void selectCategory(context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => CategoryMealsScreen(),
-      ),
-    );
+  void selectCategory(ctx) {
+    Navigator.of(ctx).pushNamed(CategoryMealsScreen.routeName,
+        arguments: {'id': id, 'title': title, 'color': color});
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(
+    //     builder: (_) => CategoryMealsScreen(
+    //       categoryTitle: title,
+    //       color: color,
+    //       id: id,
+    //     ),
+    //   ),
+    // );
   }
 
   @override
