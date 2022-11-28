@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/categories_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/meal_detail_screen.dart';
+import './screens/error404_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,12 @@ class MyApp extends StatelessWidget {
         CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => const MealDetailScreen(),
       },
+      onGenerateRoute: (settings) {
+        // print(settings.arguments);
+        return MaterialPageRoute(builder: (ctx) => const CategoriesScreen());
+      },
+      onUnknownRoute: (settings) =>
+          MaterialPageRoute(builder: (ctx) => const Error404Screen()),
     );
   }
 }
