@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import './categories_screen.dart';
 import './favourite_screen.dart';
 
-class TabsScreen extends StatefulWidget {
-  const TabsScreen({super.key});
+class AltHomeTabsTopScreen extends StatefulWidget {
+  const AltHomeTabsTopScreen({super.key});
 
   @override
-  State<TabsScreen> createState() => _TabsScreenState();
+  State<AltHomeTabsTopScreen> createState() => _AltHomeTabsTopScreenState();
 }
 
-class _TabsScreenState extends State<TabsScreen> {
+class _AltHomeTabsTopScreenState extends State<AltHomeTabsTopScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
