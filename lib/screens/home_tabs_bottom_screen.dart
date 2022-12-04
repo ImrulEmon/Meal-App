@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './favourite_screen.dart';
 import './categories_screen.dart';
+import '../widgets/main_drawer_widget.dart';
 
 class HomeTabsBottomScreen extends StatefulWidget {
   const HomeTabsBottomScreen({super.key});
@@ -34,9 +35,7 @@ class _HomeTabsBottomScreenState extends State<HomeTabsBottomScreen> {
       appBar: AppBar(
         title: Text("WB-${_pages[_selectedPageIndex]['title']}"),
       ),
-      drawer: Drawer(
-        child: Text('Drawer-Text'),
-      ),
+      drawer: MainDrawerWidget(),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.white,
