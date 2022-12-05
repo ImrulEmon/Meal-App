@@ -34,14 +34,15 @@ class _MainDrawerWidgetState extends State<MainDrawerWidget> {
             title: 'Meals',
             icon: Icons.restaurant,
             tapHandler: () {
-              Navigator.of(context).pushNamed('/');
+              Navigator.of(context).pushReplacementNamed('/');
             },
           ),
           buildListTileWidget(
             title: 'Filters',
             icon: Icons.settings,
             tapHandler: () {
-              Navigator.of(context).pushNamed(FiltersScreen.routeName);
+              Navigator.of(context)
+                  .pushReplacementNamed(FiltersScreen.routeName);
             },
           ),
           // buildListTileWidget(),
