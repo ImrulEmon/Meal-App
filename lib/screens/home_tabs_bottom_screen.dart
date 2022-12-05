@@ -35,7 +35,7 @@ class _HomeTabsBottomScreenState extends State<HomeTabsBottomScreen> {
       appBar: AppBar(
         title: Text("WB-${_pages[_selectedPageIndex]['title']}"),
       ),
-      drawer: MainDrawerWidget(),
+      drawer: const MainDrawerWidget(),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.white,
